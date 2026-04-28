@@ -146,13 +146,7 @@ const App = () => {
              </div>
           </div>
         </div>
-        {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl pointer-events-none">
-          <img
-            src="/images/belowabout.png"
-            alt="pattern"
-            className="w-full object-contain opacity-40"
-          />
-        </div> */}
+        
       </section>
 
       {/* --- Sourcing Section --- */}
@@ -283,45 +277,55 @@ const App = () => {
       </section>
 
       {/* --- Footer --- */}
-      <footer className="relative bg-[#8bb589] text-white pt-16 md:pt-20 pb-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10 flex flex-col">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-4">
-            {/* Logo Area (Left) */}
-            <div className="w-full md:w-[40%] flex items-center justify-center md:justify-start h-full md:pl-6 lg:pl-10 pb-6 md:pb-0">
-               <img 
-                 src="/images/logo.png" 
-                 alt="Anavi Global Logo" 
-                 className="h-28 md:h-32 lg:h-36 object-contain relative z-10" 
-               />
-            </div>
+          <footer className="relative bg-[#8bb589] text-white py-20 overflow-hidden">
 
-            {/* Links Area (Middle) */}
-            <div className="w-full md:w-[25%] flex flex-col items-center md:items-start gap-3 md:gap-4 text-[17px] font-medium pt-2">
-              <a href="#" className="hover:text-green-900 transition-colors">Abouts</a>
-              <a href="#" className="hover:text-green-900 transition-colors">Products</a>
-              <a href="#" className="hover:text-green-900 transition-colors">Global Presence</a>
-              <a href="#" className="hover:text-green-900 transition-colors">Contact</a>
-            </div>
-
-            {/* Contact Info Area (Right) */}
-            <div className="w-full md:w-[35%] flex flex-col items-center md:items-start gap-3 md:gap-4 text-[17px] font-medium pt-2">
-              <p>+91 99999 99999</p>
-              <p>info@anaviglobal.com</p>
-              <p>Chennai, India</p>
-              <div className="flex gap-4 mt-2">
-                <Send className="cursor-pointer hover:scale-110 transition-transform" size={22} />
-                <Camera className="cursor-pointer hover:scale-110 transition-transform" size={22} />
-                <User className="cursor-pointer hover:scale-110 transition-transform" size={22} />
+            {/* ✅ Left Curve Shape */}
+            <div className="absolute -top-[260px] -left-[5px] w-[500px] h-[500px] bg-white rounded-full flex items-center justify-center z-10">
+              <div className="mt-[260px]"> {/* Keeps the logo centered in the visible part */}
+                <img
+                  src="/images/logo.png"
+                  alt="logo"
+                  className="h-90 md:h-100 w-auto object-contain"
+                />
               </div>
             </div>
-          </div>
 
-          {/* Copyright Area */}
-          <div className="mt-16 md:mt-24 pt-6 border-t-[1.5px] border-dashed border-white/50 flex flex-col md:flex-row justify-between items-center text-[13px] font-medium opacity-90 gap-4">
-            <p>Copyright © 2026 PM Media. All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
+            {/* ✅ Content */}
+            <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-center items-center min-h-[50px]">
+              
+              <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-16 md:gap-32 ml-0 md:ml-[100px]">
+
+                {/* Links */}
+                <div className="flex flex-col gap-4 text-[24px] font-medium text-center md:text-left">
+                  <a href="#" className="hover:text-green-900">About</a>
+                  <a href="#" className="hover:text-green-900">Products</a>
+                  <a href="#" className="hover:text-green-900">Global Presence</a>
+                  <a href="#" className="hover:text-green-900">Contact</a>
+                </div>
+
+                {/* Contact */}
+                <div className="flex flex-col gap-4 text-[24px] font-medium text-center md:text-left">
+                  <p>+91 99999 99999</p>
+                  <p>info@anaviglobal.com</p>
+                  <p>Chennai, India</p>
+
+                  <div className="flex justify-center md:justify-start gap-4 mt-2">
+                    <Send size={22} className="cursor-pointer hover:scale-110" />
+                    <Camera size={22} className="cursor-pointer hover:scale-110" />
+                    <User size={22} className="cursor-pointer hover:scale-110" />
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* ✅ Bottom line + copyright */}
+            <div className="max-w-7xl mx-auto px-6 md:px-12 mt-10 border-t border-dashed border-white/50 pt-4 text-[13px] text-center opacity-90">
+              Copyright © 2026 PM Media. All Rights Reserved.
+            </div>
+
+          </footer>
     </div>
   );
 };
